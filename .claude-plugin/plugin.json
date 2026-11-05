@@ -1,0 +1,21 @@
+{
+  "name": "git-aware-fs",
+  "version": "0.1.0",
+  "description": "Keeps the git index in sync when Claude deletes or moves files: Bash rm / mv of git-tracked paths is rewritten to git rm / git mv, or denied with the git command to run.",
+  "author": { "name": "Isabel Maskrey" },
+  "homepage": "https://github.com/isabel-nh/claude-git-aware-fs",
+  "repository": "https://github.com/isabel-nh/claude-git-aware-fs",
+  "documentationUrl": "https://github.com/isabel-nh/claude-git-aware-fs#readme",
+  "supportUrl": "https://github.com/isabel-nh/claude-git-aware-fs/issues",
+  "license": "MIT",
+  "keywords": ["git", "rm", "mv", "index", "filesystem", "mod"],
+  "userConfig": {
+    "mode": {
+      "type": "string",
+      "title": "Mode",
+      "description": "rewrite: a simple rm / mv whose paths are all tracked in one repository runs as git rm / git mv; anything else touching tracked paths is denied with the commands to run. deny: every rm / mv touching tracked paths is denied with the commands to run.",
+      "options": ["rewrite", "deny"],
+      "default": "rewrite"
+    }
+  }
+}
